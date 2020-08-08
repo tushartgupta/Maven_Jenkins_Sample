@@ -8,7 +8,7 @@ environment {
     stages {
         stage("SCM Checkout of maven project from GitHub"){
             steps {
-            git credentialsId: 'a026967c-d847-44c6-8a86-fc99ff4efe00', url: 'https://github.com/tushartgupta/SampleMaven'
+                git branch: ${branch}, credentialsId: 'a026967c-d847-44c6-8a86-fc99ff4efe00', url: 'https://github.com/tushartgupta/SampleMaven'
             
             }
             }
