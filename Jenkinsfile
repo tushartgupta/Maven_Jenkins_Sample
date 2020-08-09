@@ -6,12 +6,6 @@ environment {
     DOCKER_CREDS = credentials('dockerhub_id')
 }
     stages {
-        stage("SCM Checkout of maven project from GitHub"){
-            steps {
-            git credentialsId: 'a026967c-d847-44c6-8a86-fc99ff4efe00', url: 'https://github.com/tushartgupta/SampleMaven'
-            
-            }
-            }
         stage ('Run ansible playbook to install docker, docker-compose and maven') {
             steps {
                 sh 'ansible-playbook docker_install.yml' 
