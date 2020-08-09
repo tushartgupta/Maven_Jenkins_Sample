@@ -46,4 +46,9 @@ environment {
             }
         }
     }
+    post { 
+        success { 
+            echo 'THE JENKINS JOBS COMPLETED SUCCESSFULLY!!!!'
+        }
+    }
 }
